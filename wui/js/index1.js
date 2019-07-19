@@ -39,7 +39,7 @@ $(document).ready(function () {
      var countLi = Math.floor(listPicWidth / liWidth);
      var half = Math.floor(count / 2);
      console.log(aa, bb, imgViewLeft, listWidth, -1 * oof);
-     if (bb > half && bb < (lists.length - half)) {
+     if (bb > half && bb <= (lists.length - half)) {
       //  设置列表的左右按钮显示和隐藏
        $('#smallImg-prev').show()
        $('#smallImg-next').show()
@@ -60,6 +60,7 @@ $(document).ready(function () {
     
      // 并使该元素居中，即整体平移？？
      // 获取当前点击的和正在展示的元素，
+     $('.img-view img').data('id', bb);
      $('.img-view img')[0].src = $(this).find('img')[0].src.replace(/images2/g, 'images1');
      $('.img-view img').attr('title', $(this).attr('title'));
      lists.removeClass('active');
@@ -76,6 +77,7 @@ $(document).ready(function () {
   $('#img-next').click(function () {
     var lists = $('#smallPic .smallListItem');
     var active = $('.smallListItem.active').data('list');
+    
     active++;
     var listWidth = $(lists[0]).outerWidth(true);
     
@@ -83,31 +85,61 @@ $(document).ready(function () {
 
     var countLi = Math.floor(listPicWidth / liWidth);
     var half = Math.floor(count / 2);
-    // 当图片到达最后时是设置没有图片还是回到第一张图片重新开始的
+    if (active) {
+      // 当图片到达最后时是设置没有图片还是回到第一张图片重新开始的
      if (active == lists.length ) {
-       wui.errorNotice('没有图片');
-       return;   
-    }
-    // var oof = (bb - aa) * listWidth + imgViewLeft;
-    var imgViewLeft = $('.smallListItem')[active].offsetLeft;
-    if (active > half && active < (lists.length - half)) {
-     //  设置列表的左右按钮显示和隐藏
-      $('#smallImg-prev').show()
-      $('#smallImg-next').show()
-      
-      //  $('.smallList').css('left', -1 * oof);
-    $('.smallList').css('left', -1 *( imgViewLeft-half * liWidth));
-    } else if (active < half) {
-      $('.smallList').css('left', 0);
-     //  而且还需设置左键隐藏不能点击
-      $('#smallImg-prev').hide();
-      $('#smallImg-next').show()
-    }
-    else if (active > (lists.length - half)) {
+      wui.errorNotice('没有图片');
+      return;   
+   }
+   // var oof = (bb - aa) * listWidth + imgViewLeft;
+   var imgViewLeft = $('.smallListItem')[active].offsetLeft;
+   if (active > half && active <=(lists.length - half)) {
+    //  设置列表的左右按钮显示和隐藏
      $('#smallImg-prev').show()
-      $('.smallList').css('left', -1 * (lists.length - count) * listWidth);
-      $('#smallImg-next').hide();
-    } 
+     $('#smallImg-next').show()
+     
+     //  $('.smallList').css('left', -1 * oof);
+   $('.smallList').css('left', -1 *( imgViewLeft-half * liWidth));
+   } else if (active < half) {
+     $('.smallList').css('left', 0);
+    //  而且还需设置左键隐藏不能点击
+     $('#smallImg-prev').hide();
+     $('#smallImg-next').show()
+   }
+   else if (active > (lists.length - half)) {
+    $('#smallImg-prev').show()
+     $('.smallList').css('left', -1 * (lists.length - count) * listWidth);
+     $('#smallImg-next').hide();
+      } 
+      var str = $(lists[active]).find('img')[0].src;
+      console.log(str)
+      lists.removeClass('active');
+      $(lists[active]).addClass('active');
+      $('.img-view img').data('id', active);
+      // console.log($('.img-view img').data('index'));
+      $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
+      $('.img-view img').attr('title', $(lists[active]).attr('title'));
+    } else {
+      var id = $('.img-view img').data('id');
+      var offset = $('.smallListItem')[1].offsetLeft;
+      id++;
+      if (id < count) {
+        $('.smallList').css('left', 0);
+      } else {
+        $('.smallList').css('left', -1*(id -Math.floor(count/2))* offset);
+      }
+      console.log((id-1) * offset,id)
+      
+      var str = $(lists[id]).find('img')[0].src;
+      // console.log(str)
+      lists.removeClass('active');
+      $(lists[id]).addClass('active');
+      $('.img-view img').data('id', id);
+      // console.log($('.img-view img').data('index'));
+      $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
+      $('.img-view img').attr('title', $(lists[id]).attr('title'));
+    }
+    
     // var index = 0;
     // for (var i = 0; i < lists.length; i++) {
     //   // console.log($('.img-view img').attr('title'),$(lists[i]).attr('title'))
@@ -121,14 +153,7 @@ $(document).ready(function () {
     //   }
     // }
     // find
-    var str = $(lists[active]).find('img')[0].src;
-    console.log(str)
-    lists.removeClass('active');
-    $(lists[active]).addClass('active');
-    $('.img-view img').data('id', active);
-    // console.log($('.img-view img').data('index'));
-    $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
-    $('.img-view img').attr('title', $(lists[active]).attr('title'));
+   
 
   })
   // 图片左键
@@ -142,31 +167,62 @@ $(document).ready(function () {
 
     var countLi = Math.floor(listPicWidth / liWidth);
     var half = Math.floor(count / 2);
-    // 当图片到达最后时是设置没有图片还是回到第一张图片重新开始的
+    if (active) {
+       // 当图片到达最后时是设置没有图片还是回到第一张图片重新开始的
      if (active < 0 ) {
-       wui.errorNotice('当前图片是第一张，请往后翻');
-       return;   
-    }
-    // var oof = (bb - aa) * listWidth + imgViewLeft;
-    var imgViewLeft = $('.smallListItem')[active].offsetLeft;
-    if (active > half && active < (lists.length - half)) {
-     //  设置列表的左右按钮显示和隐藏
-      $('#smallImg-prev').show()
-      $('#smallImg-next').show()
-      
-      //  $('.smallList').css('left', -1 * oof);
-    $('.smallList').css('left', -1 *( imgViewLeft-half * liWidth));
-    } else if (active < half) {
-      $('.smallList').css('left', 0);
-     //  而且还需设置左键隐藏不能点击
-      $('#smallImg-prev').hide();
-      $('#smallImg-next').show()
-    }
-    else if (active > (lists.length - half)) {
+      wui.errorNotice('当前图片是第一张，请往后翻');
+      return;   
+   }
+   // var oof = (bb - aa) * listWidth + imgViewLeft;
+   var imgViewLeft = $('.smallListItem')[active].offsetLeft;
+   if (active > half && active <= (lists.length - half)) {
+    //  设置列表的左右按钮显示和隐藏
      $('#smallImg-prev').show()
-      $('.smallList').css('left', -1 * (lists.length - count) * listWidth);
-      $('#smallImg-next').hide();
-    } 
+     $('#smallImg-next').show()
+     
+     //  $('.smallList').css('left', -1 * oof);
+   $('.smallList').css('left', -1 *( imgViewLeft-half * liWidth));
+   } else if (active < half) {
+     $('.smallList').css('left', 0);
+    //  而且还需设置左键隐藏不能点击
+     $('#smallImg-prev').hide();
+     $('#smallImg-next').show()
+   }
+   else if (active > (lists.length - half)) {
+    $('#smallImg-prev').show()
+     $('.smallList').css('left', -1 * (lists.length - count) * listWidth);
+     $('#smallImg-next').hide();
+      } 
+      var str = $(lists[active]).find('img')[0].src;
+
+      $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
+      lists.removeClass('active');
+      $(lists[active]).addClass('active');
+      $('.img-view img').data('id', active);
+      $('.img-view img').attr('title', $(lists[active]).attr('title'));
+    } else {
+      var id = $('.img-view img').data('id');
+      var offset = $('.smallListItem')[1].offsetLeft;
+      id--;
+      var ssss = $('.smallList').css('left').split('px')[0];
+      console.log((lists.length - count));
+      if (id >(lists.length-count)) {
+        $('.smallList').css('left', (lists.length-count).offset);
+      } else {
+        $('.smallList').css('left', -1*(id -Math.floor(count/2))* offset);
+      }
+      console.log((id-1) * offset,id)
+      
+      var str = $(lists[id]).find('img')[0].src;
+      // console.log(str)
+      lists.removeClass('active');
+      $(lists[id]).addClass('active');
+      $('.img-view img').data('id', id);
+      // console.log($('.img-view img').data('index'));
+      $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
+      $('.img-view img').attr('title', $(lists[id]).attr('title'));
+    }
+   
     // var index = 0;
     // for (var i = 0; i < lists.length; i++) {
     //   // console.log($('.img-view img').attr('title'),$(lists[i]).attr('title'))
@@ -180,13 +236,7 @@ $(document).ready(function () {
     //   }
     // }
     // find
-    var str = $(lists[active]).find('img')[0].src;
-
-    $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
-    lists.removeClass('active');
-    $(lists[active]).addClass('active');
-    $('.img-view img').data('id', active);
-    $('.img-view img').attr('title', $(lists[active]).attr('title'));
+   
   })
 
   
@@ -195,24 +245,43 @@ $(document).ready(function () {
 
 
     // 两者都点击后转换的clickTimes的值都高1，怎么判定设置？？还有偏移量有点bug
+  // 图片列表左键
     $('#smallImg-prev').click(function () {
-    
+      $('#smallImg-next').show();
+      
     var count = Math.floor(listPicWidth / liWidth);
-    // 怎么一下展示后面的所有项
-    // count = count + 1;
-    // 设置偏移量
-    // ul的偏移量
+ 
     // 如果没有图片，即当前li存数不够,未填充li，重新从第一个开始
-    var times = Math.ceil($('.smallListItem').length / count);
-    var offset = $('.smallListItem')[1].offsetLeft;
+      var times = Math.ceil($('.smallListItem').length / count);
+      clickTimes--;
 
-    clickTimes--;
-
-    if (clickTimes <0) {
-      clickTimes = times - 1;
-      $('.smallList').css('left', -1 * (clickTimes) * (offset * count ));
-      return;
-    }
+    //   if (clickTimes < 0) {
+    //     wui.errorNotice('已是第一页');
+    //     return;
+    //  }
+     var offset = $('.smallListItem')[1].offsetLeft;
+      var active = $('.smallListItem.active').data('list');
+      var ssss = $('.smallList').css('left').split('px')[0];
+      if (active) {
+        if (active < (count+Math.floor(count/2))) {
+          $('.smallList').css('left', 0);
+        } else {
+          $('.smallList').css('left', -1  * (offset * (active-count-Math.floor(count/2)) ))
+        }
+      } else {
+        if (Math.abs(ssss) < offset * count) {
+        $('.smallList').css('left', 0)          
+        } else {
+          console.log(offset * count + ssss)
+          $('.smallList').css('left', -1 * ( Math.abs(ssss)-offset * count));
+        }
+      }
+      $('.smallListItem').removeClass('active');
+    // if (clickTimes <0) {
+    //   clickTimes = times - 1;
+    //   $('.smallList').css('left', -1 * (clickTimes) * (offset * count ));
+    //   return;
+    // }
 
     // $('.smallList').css('left',clickTimes = 0 ? (-1 *clickTimes  * ($('.smallListItem')[count].offsetLeft - 30)):30);
     // if (clickTimes == 0) {
@@ -228,35 +297,61 @@ $(document).ready(function () {
     // $('.smallList').css('left', -1 * (clickTimes-1) * (offset * count ));
       
     // }
-    $('.smallList').css('left', -1 * (clickTimes) * (offset * count ));
-    console.log(clickTimes,times);
+    // $('.smallList').css('left', -1 * (clickTimes) * (offset * count ));
 
   })
 
   // 图片列表的右键
   $('#smallImg-next').click(function () {
+    $('#smallImg-prev').show();
+    var lists = $('#smallPic .smallListItem');
+
     var count = Math.floor(listPicWidth / liWidth);
+    clickTimes++;
+    console.log(clickTimes);
     // 怎么一下展示后面的所有项
     // count = count + 1;
     var times = Math.ceil($('.smallListItem').length / count);
+    
     var offset = $('.smallListItem')[1].offsetLeft;
-    console.log(count, times);
 
-    if (clickTimes == (times-1)) {
-      clickTimes = 0;
-    $('.smallList').css('left', 0);
+    var active = $('.smallListItem.active').data('list');
+    var ssss = $('.smallList').css('left').split('px')[0];
+    if (Math.abs(ssss) >= offset*(lists.length-count)) {
+      wui.errorNotice('已到最后一页');
       return;
     }
-    
-    clickTimes++;
+    if (active) {
+      if (active >(lists.length-count)) {
+        $('.smallList').css('left', -1*offset*(lists.length-count));
+      } else {
+        $('.smallList').css('left', -1  * (offset * (active+Math.floor(count/2)) ))
+      }
+    } else {
+      if (Math.abs(ssss) > offset*(lists.length-count)) {
+      $('.smallList').css('left', offset*(lists.length-count))          
+      } else {
+        // console.log(offset * count + ssss)
+        $('.smallList').css('left', -1 * ( Math.abs(ssss)+offset * count));
+      }
+    }
+    $('.smallListItem').removeClass('active');
+    console.log(count, times);
 
     // if (clickTimes == (times-1)) {
-    //   $('.smallList').css('left', -1 * (clickTimes) * (offset*count + 30));
+    //   clickTimes = 0;
+    // $('.smallList').css('left', 0);
     //   return;
     // }
-    $('.smallList').css('left', -1 * (clickTimes) * (offset * count));
+    
+
+    // // if (clickTimes == (times-1)) {
+    // //   $('.smallList').css('left', -1 * (clickTimes) * (offset*count + 30));
+    // //   return;
+    // // }
+    // $('.smallList').css('left', -1 * (clickTimes) * (offset * count));
      
-    console.log(times,clickTimes);
+    // console.log(times,clickTimes);
 
   })
 })
