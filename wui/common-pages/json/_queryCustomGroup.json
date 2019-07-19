@@ -1,0 +1,64 @@
+{
+    "describe": "本数据用途:用于用户选择的自定义分组数据",
+    "rows": [
+	    {
+	        "groupId": "010101",
+	        "groupUsers": [
+	        	{
+	        		"userId": "libai",
+	        		"userName": "李白"
+	        	},{
+	        		"userId": "wangwu",
+	        		"userName": "王五"
+	        	}
+	        ],
+	        "groupName": "libai,wangwu",
+	        "groupText": "李白,王五"
+	    },
+	    {
+	        "groupId": "010102",
+	        "groupUsers": [
+	        	{
+	        		"userId": "zhanghan",
+	        		"userName": "张翰"
+	        	},{
+	        		"userId": "wulifang",
+	        		"userName": "吴立方"
+	        	}
+	        ],
+	        "groupName": "zhanghan,wulifang",
+	        "groupText": "张翰,吴立方"
+	    },
+	    {
+	        "groupId": "010103",
+	        "groupUsers": [
+	        	{
+	        		"userId": "chenli",
+	        		"userName": "陈粒"
+	        	},{
+	        		"userId": "zhoudan",
+	        		"userName": "周丹"
+	        	},{
+	        		"userId": "liuyujiao",
+	        		"userName": "刘玉娇"
+	        	}
+	        ],
+	        "groupName": "chenli,zhoudan,liuyujiao",
+	        "groupText": "陈粒,周丹,刘玉娇"
+	    },
+	    {
+	        "groupId": "010104",
+	        "groupUsers": [
+	        	{
+	        		"userId": "xingmin",
+	        		"userName": "邢敏"
+	        	},{
+	        		"userId": "chenli",
+	        		"userName": "陈粒"
+	        	}
+	        ],
+	        "groupName": "xingmin,chenli",
+	        "groupText": "邢敏,陈粒"
+	    }
+    ]
+}

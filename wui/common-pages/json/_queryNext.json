@@ -1,0 +1,1008 @@
+{
+    "businessObject": [
+        {
+            "stepName": "模拟步骤A",
+            "stepLabel": "经办人拟稿->模拟步骤A",
+            "stepDescription": "",
+            "multipleSelectTag": "模拟步骤C,模拟步骤E",
+            "orderby": 0,
+            "allowSelect": true,
+            "allowSelectAll": false,
+            "autoSelectAll": false,
+            "singleSelect": false,
+            "needUser": true,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "7dd93ea3-36c1-bbb6-48a0-fe501f4e1932",
+                    "orgName": "A组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "961aa4c1-54c4-64e2-def3-c1f24702701c",
+                            "userName": "A用户1-1"
+                        },
+                        {
+                            "userId": "2a911df6-9df6-f2b1-d4a8-5382b1799bef",
+                            "userName": "A用户1-2"
+                        },
+                        {
+                            "userId": "3cc4cf78-34b7-a45e-cb7f-e137a720bb63",
+                            "userName": "A用户1-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "4dc124e3-943c-772b-958c-31ba472cfca6",
+                    "orgName": "A组织2",
+                    "stepUsers": [
+                        {
+                            "userId": "16f60efd-0231-4baf-96cb-d6138af3a3fc",
+                            "userName": "A用户2-1"
+                        },
+                        {
+                            "userId": "2b0f2b45-4e38-3937-6bed-8150e1ed436c",
+                            "userName": "A用户2-2"
+                        },
+                        {
+                            "userId": "b29fe561-9d4f-ef8c-d783-fb12215f494e",
+                            "userName": "A用户2-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "2e3b3695-26e5-7f8b-323f-1fe17f38b959",
+                    "orgName": "A组织3",
+                    "stepUsers": [
+                        {
+                            "userId": "0c53cbba-de15-3da2-41ef-99ee6b5407a9",
+                            "userName": "A用户3-1"
+                        },
+                        {
+                            "userId": "35874c78-20b2-56c7-922a-aa9d4acee7ac",
+                            "userName": "A用户3-2"
+                        },
+                        {
+                            "userId": "1f2102b8-a6d9-7731-2bac-fd8e99b37f55",
+                            "userName": "A用户3-3"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "b7b5ad38-70e4-5710-f270-570f4951c290",
+                    "title": "A公司1",
+                    "children": [
+                        {
+                            "key": "8c1e4403-514c-3253-051f-8f40e59c76a5",
+                            "title": "A部门1-1",
+                            "children": [
+                                {
+                                    "userId": "3d6c6386-4816-54df-f480-f4418b0de94b",
+                                    "userName": "A用户1-1-1"
+                                },
+                                {
+                                    "userId": "fb3e217e-a31a-c9ad-d57a-73743ec7c571",
+                                    "userName": "A用户1-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "1ad16554-b34f-a8b2-c2da-c7cbeae55c9f",
+                            "title": "A部门1-2",
+                            "children": [
+                                {
+                                    "userId": "080070d7-e4f7-f310-2158-9f09dfa98de1",
+                                    "userName": "A用户1-2-1"
+                                },
+                                {
+                                    "userId": "aca19e1b-92ab-3e15-e4d6-b2908b581b60",
+                                    "userName": "A用户1-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "54cbbaee-6d3f-8c89-508f-b8958c06c26e",
+                    "title": "A公司2",
+                    "children": [
+                        {
+                            "key": "2330a231-96b1-e506-f581-dd843292f2dd",
+                            "title": "A部门2-1",
+                            "children": [
+                                {
+                                    "userId": "cfdd30f5-f0f6-043c-297f-5c004c4ab7f5",
+                                    "userName": "A用户2-1-1"
+                                },
+                                {
+                                    "userId": "7fe8b3b2-619a-f40f-a35a-f0dc0819bd43",
+                                    "userName": "A用户2-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "91cae73a-5922-def2-fd49-36b1e12ac96b",
+                            "title": "A部门2-2",
+                            "children": [
+                                {
+                                    "userId": "cf82237d-4c73-9bb5-de01-a5efcf031ff9",
+                                    "userName": "A用户2-2-1"
+                                },
+                                {
+                                    "userId": "633bc29a-144b-5a6b-0be6-9f926ef879fd",
+                                    "userName": "A用户2-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        },
+        {
+            "stepName": "模拟步骤B(人员单选,禁用)",
+            "stepLabel": "经办人拟稿->模拟步骤B",
+            "stepDescription": "",
+            "multipleSelectTag": "",
+            "orderby": 0,
+            "allowSelect": false,
+            "allowSelectAll": false,
+            "autoSelectAll": false,
+            "singleSelect": false,
+            "needUser": true,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "8ea4e3bf-ee5f-9188-dd2e-fe4608daf543",
+                    "orgName": "B组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "d6e6b368-9bb6-28d6-8673-dbda220c484c",
+                            "userName": "B用户1-1"
+                        },
+                        {
+                            "userId": "a0429572-6592-4976-bcfc-fc8841e3e829",
+                            "userName": "B用户1-2"
+                        },
+                        {
+                            "userId": "5684e479-2fe6-69a8-9710-294673389b6b",
+                            "userName": "B用户1-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "701db25e-3e4e-3074-48f5-bedb027527a9",
+                    "orgName": "B组织2",
+                    "stepUsers": [
+                        {
+                            "userId": "e3ff1e3d-69ca-97ec-8031-984d6fa03d3b",
+                            "userName": "B用户2-1"
+                        },
+                        {
+                            "userId": "46d9267c-e3c5-c100-92df-82f660d2032a",
+                            "userName": "B用户2-2"
+                        },
+                        {
+                            "userId": "e17b6a0f-36c0-32e3-173d-cf2bc653875e",
+                            "userName": "B用户2-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "4e1c07dd-5aa6-1b06-c9a2-3f697c212541",
+                    "orgName": "B组织3",
+                    "stepUsers": [
+                        {
+                            "userId": "513bab13-6785-0c7b-bed8-c9f57e924e5d",
+                            "userName": "B用户3-1"
+                        },
+                        {
+                            "userId": "6bdb7036-f15b-8c11-a903-7bdb5b0a52f7",
+                            "userName": "B用户3-2"
+                        },
+                        {
+                            "userId": "7ba653e3-404b-ef6a-8cc1-f58b2100e0b3",
+                            "userName": "B用户3-3"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "bd1f16c2-3472-19b7-c68e-4544a2be03f4",
+                    "title": "B公司1",
+                    "children": [
+                        {
+                            "key": "c0995f2f-b5f3-bbcf-3342-066bcb00d19f",
+                            "title": "B部门1-1",
+                            "children": [
+                                {
+                                    "userId": "e51fd06c-348f-d28a-ad86-d7f02df4f52b",
+                                    "userName": "B用户1-1-1"
+                                },
+                                {
+                                    "userId": "77825fa2-16a6-1c38-e305-7f3e7ec3eb65",
+                                    "userName": "B用户1-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "687db478-c477-d58b-d6cb-8f623ffad3f7",
+                            "title": "B部门1-2",
+                            "children": [
+                                {
+                                    "userId": "acca8ace-bab3-fe93-097f-a841ea51522a",
+                                    "userName": "B用户1-2-1"
+                                },
+                                {
+                                    "userId": "16fef761-c7b9-b43b-9741-3426dcf09815",
+                                    "userName": "B用户1-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "fc6c2073-f700-4454-484b-eae8317d6503",
+                    "title": "B公司2",
+                    "children": [
+                        {
+                            "key": "eb983603-875a-99f1-d50f-4230ac679c26",
+                            "title": "B部门2-1",
+                            "children": [
+                                {
+                                    "userId": "dac4e7a8-40e5-d5b0-5939-f537d10826fd",
+                                    "userName": "B用户2-1-1"
+                                },
+                                {
+                                    "userId": "d7bb0c8b-7b7f-045c-7ffa-e1e58eddfd80",
+                                    "userName": "B用户2-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "ba229197-ca94-83a6-4916-acedc27155e0",
+                            "title": "B部门2-2",
+                            "children": [
+                                {
+                                    "userId": "06baa22e-2010-a9c2-4d6d-b13bc2da9b17",
+                                    "userName": "B用户2-2-1"
+                                },
+                                {
+                                    "userId": "2db29d68-85dd-401b-03b6-718cbfc48d2f",
+                                    "userName": "B用户2-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        },
+        {
+            "stepName": "模拟步骤C",
+            "stepLabel": "经办人拟稿->模拟步骤C",
+            "stepDescription": "",
+            "multipleSelectTag": "模拟步骤A,模拟步骤E",
+            "orderby": 0,
+            "allowSelect": true,
+            "allowSelectAll": false,
+            "autoSelectAll": false,
+            "singleSelect": false,
+            "needUser": true,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "11ac4960-582c-edc7-66c5-d9c4b6304632",
+                    "orgName": "C组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "49bd9fae-9cb0-fb3e-145a-d2ff9b51ed1d",
+                            "userName": "C用户1-1"
+                        },
+                        {
+                            "userId": "665d15a8-721f-cb7f-640a-bba3054151c3",
+                            "userName": "C用户1-2"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "fac7351a-3bd0-ed17-7176-58f880b1dd25",
+                    "orgName": "C组织2",
+                    "stepUsers": [
+                        {
+                            "userId": "8bb13b06-50a7-bc48-d013-436fa2314fe9",
+                            "userName": "C用户2-1"
+                        },
+                        {
+                            "userId": "39c236a9-7a14-5cec-cdf0-19acced8f1e4",
+                            "userName": "C用户2-2"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "089c6e0b-507d-7764-3b77-2db45ea5b3bd",
+                    "title": "C公司1",
+                    "children": [
+                        {
+                            "key": "4a981f5c-71a8-e14c-0f67-998c0df9e6d6",
+                            "title": "C部门1-1",
+                            "children": [
+                                {
+                                    "userId": "3e7f7122-ab24-d3c3-d11a-57340f0b139f",
+                                    "userName": "C用户1-1-1"
+                                },
+                                {
+                                    "userId": "65cda99c-69c4-b484-9d78-181a7bdc4e90",
+                                    "userName": "C用户1-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "f04b1f0c-e7b6-c90e-dff1-ccd42e615c12",
+                            "title": "C部门1-2",
+                            "children": [
+                                {
+                                    "userId": "49f30349-c7cc-9852-31ff-47a88ee0a917",
+                                    "userName": "C用户1-2-1"
+                                },
+                                {
+                                    "userId": "fa004f20-26f8-d3b8-f1c4-7e240cd6f1a3",
+                                    "userName": "C用户1-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "88dcfdaa-b399-b69e-8a8c-2ab9e67adc86",
+                    "title": "C公司2",
+                    "children": [
+                        {
+                            "key": "b6e33181-de43-ee56-db52-c8cb94789273",
+                            "title": "C部门2-1",
+                            "children": [
+                                {
+                                    "userId": "ff70b4cc-98b0-7498-5a3d-8db12fe89406",
+                                    "userName": "C用户2-1-1"
+                                },
+                                {
+                                    "userId": "53f6bcd6-7bf3-baaf-4eb8-05993ebcc4d3",
+                                    "userName": "C用户2-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "69f4a37e-c9f9-ad9e-5d25-5fb13f815773",
+                            "title": "C部门2-2",
+                            "children": [
+                                {
+                                    "userId": "bd921e3a-2900-ce29-1b47-49df15d90785",
+                                    "userName": "C用户2-2-1"
+                                },
+                                {
+                                    "userId": "a6abcace-2233-4469-261f-6dd2dce89806",
+                                    "userName": "C用户2-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        },
+        {
+            "stepName": "模拟步骤D(单选,且可不选用户)",
+            "stepLabel": "经办人拟稿->模拟步骤D",
+            "stepDescription": "",
+            "multipleSelectTag": null,
+            "orderby": 0,
+            "allowSelect": true,
+            "allowSelectAll": false,
+            "autoSelectAll": false,
+            "singleSelect": false,
+            "needUser": false,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "a893e628-fc3a-32b9-0369-51a433af3409",
+                    "orgName": "D组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "a69648ed-390f-47da-af93-6bf478fbb814",
+                            "userName": "D用户1-1"
+                        },
+                        {
+                            "userId": "7afba1af-fd9f-4dd6-db49-1fdeb9982486",
+                            "userName": "D用户1-2"
+                        },
+                        {
+                            "userId": "6a4181cb-bb1e-b630-e7db-ca121f8fb6d5",
+                            "userName": "D用户1-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "9dc11112-88f1-0939-8c92-c89827ced21e",
+                    "orgName": "D组织2",
+                    "stepUsers": [
+                        {
+                            "userId": "d25f9a42-ea57-4bc2-5bb2-267fcb865e2c",
+                            "userName": "D用户2-1"
+                        },
+                        {
+                            "userId": "66b537e3-6173-1aac-df4e-f41fc7ddbdc0",
+                            "userName": "D用户2-2"
+                        },
+                        {
+                            "userId": "d0402e7e-4213-b20a-264e-df0b0bd2f81d",
+                            "userName": "D用户2-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "a3449421-a303-ca53-78f9-4f10dab7c1bd",
+                    "orgName": "D组织3",
+                    "stepUsers": [
+                        {
+                            "userId": "a2f8fa43-605e-05e4-de7f-ddc1308d44b4",
+                            "userName": "D用户3-1"
+                        },
+                        {
+                            "userId": "ce2b8b70-b9dd-d9be-c300-a3727d72fd15",
+                            "userName": "D用户3-2"
+                        },
+                        {
+                            "userId": "6516c728-9a7c-366c-9982-3e9c98b5fcc8",
+                            "userName": "D用户3-3"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "20950b29-b27b-2845-d2d9-ae46a9b3cbdf",
+                    "title": "D公司1",
+                    "children": [
+                        {
+                            "key": "81ede41b-450f-e846-7a97-6de9be60712d",
+                            "title": "D部门1-1",
+                            "children": [
+                                {
+                                    "userId": "57715661-a0f2-9167-f7e0-c3ba3d0943f3",
+                                    "userName": "D用户1-1-1"
+                                },
+                                {
+                                    "userId": "358bfdd0-872f-7c4d-69e5-f2c4ef8e465e",
+                                    "userName": "D用户1-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "ba9874f1-2e4e-0676-215a-34c7d117b0ce",
+                            "title": "D部门1-2",
+                            "children": [
+                                {
+                                    "userId": "4f014c00-9e90-d4ed-3064-83a9f923255b",
+                                    "userName": "D用户1-2-1"
+                                },
+                                {
+                                    "userId": "28ce4193-8a9a-7e8b-a9e8-209719360753",
+                                    "userName": "D用户1-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "d89e82e5-055b-3899-b670-3a9ca55b7c8f",
+                    "title": "D公司2",
+                    "children": [
+                        {
+                            "key": "cc3b7485-28dd-1471-3ca5-3066e2f4df55",
+                            "title": "D部门2-1",
+                            "children": [
+                                {
+                                    "userId": "4d0410d8-21ca-24c5-f9be-da879f641056",
+                                    "userName": "D用户2-1-1"
+                                },
+                                {
+                                    "userId": "0f503490-c28f-a742-d8f1-53916d80553d",
+                                    "userName": "D用户2-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "56593ee7-0249-eae0-8393-ade4e9563d30",
+                            "title": "D部门2-2",
+                            "children": [
+                                {
+                                    "userId": "d502ada0-c9fd-3bd4-2333-415e20744478",
+                                    "userName": "D用户2-2-1"
+                                },
+                                {
+                                    "userId": "643ae043-1f63-5c8f-1184-1eddb09e819e",
+                                    "userName": "D用户2-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        },
+        {
+            "stepName": "模拟步骤E(多选,且可不选用户)",
+            "stepLabel": "经办人拟稿->模拟步骤E",
+            "stepDescription": "",
+            "multipleSelectTag": "模拟步骤A,模拟步骤C",
+            "orderby": 0,
+            "allowSelect": true,
+            "allowSelectAll": false,
+            "autoSelectAll": false,
+            "singleSelect": false,
+            "needUser": false,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "8de3bb81-2726-03f9-0833-fd778a66e2a2",
+                    "orgName": "E组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "b01837a1-8fd7-7857-e628-484817f8d15d",
+                            "userName": "E用户1-1"
+                        },
+                        {
+                            "userId": "29181e71-f7fe-094d-2e15-e77f0ac2b562",
+                            "userName": "E用户1-2"
+                        },
+                        {
+                            "userId": "61cedaae-3684-b2be-aff3-882f4a87ee53",
+                            "userName": "E用户1-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "d236a0f5-f71d-d269-436d-6126195bb96b",
+                    "orgName": "E组织2",
+                    "stepUsers": [
+                        {
+                            "userId": "f944f896-ca13-cbf5-c477-f9a10de745fc",
+                            "userName": "E用户2-1"
+                        },
+                        {
+                            "userId": "b0fd08bc-ccf9-72c2-ab8e-b8100c804c06",
+                            "userName": "E用户2-2"
+                        },
+                        {
+                            "userId": "09ef2fd1-df83-50f7-d812-933736a83428",
+                            "userName": "E用户2-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "0a88e6e3-05b4-c396-3f71-98c45dbffab1",
+                    "orgName": "E组织3",
+                    "stepUsers": [
+                        {
+                            "userId": "3d0d12d8-6b0a-49e9-aad3-9bc4cbc0ac70",
+                            "userName": "E用户3-1"
+                        },
+                        {
+                            "userId": "bb7be12a-9dc2-eff6-66eb-806be3a47570",
+                            "userName": "E用户3-2"
+                        },
+                        {
+                            "userId": "3cec1aef-d324-f92c-02e8-8814c5b282d2",
+                            "userName": "E用户3-3"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "fa500d2d-8d73-8800-0a89-940fd27edf3d",
+                    "title": "E公司1",
+                    "children": [
+                        {
+                            "key": "8f863145-754a-e111-2ae1-680874d2b19f",
+                            "title": "E部门1-1",
+                            "children": [
+                                {
+                                    "userId": "0c4b29a6-2177-6157-b5b7-436df913552b",
+                                    "userName": "E用户1-1-1"
+                                },
+                                {
+                                    "userId": "feee1616-a624-8d95-2cc2-e23030e308a1",
+                                    "userName": "E用户1-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "a59dbde4-ab5b-2b8b-86ab-0662b983278d",
+                            "title": "E部门1-2",
+                            "children": [
+                                {
+                                    "userId": "c9eaf5df-edcb-b63e-f786-fb41fd9bd7f5",
+                                    "userName": "E用户1-2-1"
+                                },
+                                {
+                                    "userId": "50167a3b-0398-3eaf-06be-9626e137f947",
+                                    "userName": "E用户1-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "7eb1cde1-c06c-8b7a-27e0-e54506b02bd7",
+                    "title": "E公司2",
+                    "children": [
+                        {
+                            "key": "f5ff0814-ea04-df95-3aa3-f34aa23ca79e",
+                            "title": "E部门2-1",
+                            "children": [
+                                {
+                                    "userId": "69bcaba6-cfcc-f960-e70d-156e0e7ff023",
+                                    "userName": "E用户2-1-1"
+                                },
+                                {
+                                    "userId": "7f389a9e-cdcc-a9ce-34b2-5d74413fcf0f",
+                                    "userName": "E用户2-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "fea4b0b2-bd10-5b16-05c6-aadba494b03f",
+                            "title": "E部门2-2",
+                            "children": [
+                                {
+                                    "userId": "2d49d2ad-8af8-2c79-34d1-6b218a064092",
+                                    "userName": "E用户2-2-1"
+                                },
+                                {
+                                    "userId": "fb06ec60-eda2-baf6-ffe0-506f6a3297ba",
+                                    "userName": "E用户2-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        },
+        {
+            "stepName": "模拟步骤F(包含当前组织)",
+            "stepLabel": "经办人拟稿->模拟步骤F",
+            "stepDescription": "",
+            "multipleSelectTag": "",
+            "orderby": 0,
+            "allowSelect": true,
+            "allowSelectAll": false,
+            "autoSelectAll": false,
+            "singleSelect": false,
+            "needUser": true,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "a26da054-cecd-1ba6-6098-68ba136e1b05",
+                    "orgName": "F组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "6a684f10-5a98-6ac9-3a14-b318489c4d55",
+                            "userName": "F用户1-1"
+                        },
+                        {
+                            "userId": "fdd440c9-53b9-67fd-a4e6-547b8016f3a9",
+                            "userName": "F用户1-2"
+                        },
+                        {
+                            "userId": "70b62a1d-c2ed-3da6-60ed-4190d935e65c",
+                            "userName": "F用户1-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "44e08e23-aff9-dd96-6f8a-7366adaaa5a2",
+                    "orgName": "F组织2(当前用户所在组织)",
+                    "stepUsers": [
+                        {
+                            "userId": "6a6851f1-1a8d-2883-b3aa-b5d2587c145b",
+                            "userName": "F用户2-1"
+                        },
+                        {
+                            "userId": "00f00e21-6346-a7a3-7705-f0ca28e5d2ba",
+                            "userName": "F用户2-2"
+                        },
+                        {
+                            "userId": "61e8209e-7b3e-98b8-8714-0dd93cf55283",
+                            "userName": "F用户2-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "a7e6d186-bc89-1314-c4ab-9da6fcf5e778",
+                    "orgName": "F组织3",
+                    "stepUsers": [
+                        {
+                            "userId": "0675c089-0629-d463-57d7-9c697bc42d69",
+                            "userName": "F用户3-1"
+                        },
+                        {
+                            "userId": "86114ad4-06e6-a644-a424-3cfb16b8033d",
+                            "userName": "F用户3-2"
+                        },
+                        {
+                            "userId": "84140906-1a11-b51f-a915-7701b102c6fd",
+                            "userName": "F用户3-3"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "7352d9a3-cbb1-bce1-9d3e-f97278816516",
+                    "title": "F公司1",
+                    "children": [
+                        {
+                            "key": "b5f6fe40-5589-92dc-3c22-0cbdbd873854",
+                            "title": "F部门1-1",
+                            "children": [
+                                {
+                                    "userId": "4ea7d881-03e2-550f-3ccf-45d40075018f",
+                                    "userName": "F用户1-1-1"
+                                },
+                                {
+                                    "userId": "36cb3c3a-614e-40c6-90f4-35022b6db9f3",
+                                    "userName": "F用户1-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "f8f42f8e-75f7-ed7b-5513-8288b41131cb",
+                            "title": "F部门1-2",
+                            "children": [
+                                {
+                                    "userId": "0262ce45-55df-f1a7-f3fb-2fcd506fde93",
+                                    "userName": "F用户1-2-1"
+                                },
+                                {
+                                    "userId": "e2cc04ac-51f3-3d2b-f3c6-ad39cec1d9d4",
+                                    "userName": "F用户1-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "44e08e23-aff9-dd96-6f8a-7366adaaa5a2",
+                    "title": "F公司2(当前用户所在子公司)",
+                    "children": [
+                        {
+                            "key": "5096c0eb-25f7-65ff-839c-d38de11a4185",
+                            "title": "F部门2-1",
+                            "children": [
+                                {
+                                    "userId": "3f8d3010-ed07-9df8-4263-820a83c64f31",
+                                    "userName": "F用户2-1-1"
+                                },
+                                {
+                                    "userId": "379e38bf-26f5-3b56-a91c-4826e3681a1a",
+                                    "userName": "F用户2-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "3e276820-e5ac-df03-8f4f-7c4c63e44016",
+                            "title": "F部门2-2",
+                            "children": [
+                                {
+                                    "userId": "80e5fa48-6bfe-e310-b1c7-74434a473ac4",
+                                    "userName": "F用户2-2-1"
+                                },
+                                {
+                                    "userId": "689a7a18-3564-3718-bede-d2aa3ccf2543",
+                                    "userName": "F用户2-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        },
+        {
+            "stepName": "模拟步骤G(自动全选)",
+            "stepLabel": "经办人拟稿->模拟步骤G",
+            "stepDescription": "",
+            "multipleSelectTag": null,
+            "orderby": 0,
+            "allowSelect": true,
+            "allowSelectAll": false,
+            "autoSelectAll": true,
+            "singleSelect": false,
+            "needUser": true,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "b9eed54f-5449-562d-82b5-94627e9a9b6f",
+                    "orgName": "G组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "f58855ba-8179-827f-4e65-3d000d2fa086",
+                            "userName": "G用户1-1"
+                        },
+                        {
+                            "userId": "f8d3dd2b-8e08-fed9-fee3-65f9b709036c",
+                            "userName": "G用户1-2"
+                        },
+                        {
+                            "userId": "5402fec3-ae50-58b1-47fc-6271c81b4734",
+                            "userName": "G用户1-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "9077bae9-ab6e-da37-78b7-6d44f9f19bbe",
+                    "orgName": "G组织2",
+                    "stepUsers": [
+                        {
+                            "userId": "f9412f56-d3ee-7319-7962-90662bdcb14d",
+                            "userName": "G用户2-1"
+                        },
+                        {
+                            "userId": "48a21fa4-a94c-0d63-3eef-317828e0833e",
+                            "userName": "G用户2-2"
+                        },
+                        {
+                            "userId": "747c6f91-71b0-5939-bba3-76dcd03d3a37",
+                            "userName": "G用户2-3"
+                        }
+                    ]
+                },
+                {
+                    "orgId": "b68b5a80-a5c6-d21f-2a6a-23801312684e",
+                    "orgName": "G组织3",
+                    "stepUsers": [
+                        {
+                            "userId": "b3388cc3-ae4f-785e-2a14-468851a0ac19",
+                            "userName": "G用户3-1"
+                        },
+                        {
+                            "userId": "ef529c30-b5a6-d978-d1c4-dac9d9e8c2aa",
+                            "userName": "G用户3-2"
+                        },
+                        {
+                            "userId": "799dc139-1449-c1af-649f-3c6a2d0cde99",
+                            "userName": "G用户3-3"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "28789b7f-f68c-e1b8-6687-a922c3c6c0b7",
+                    "title": "G公司1",
+                    "children": [
+                        {
+                            "key": "cca055b9-0eb1-f757-dc1a-b59cda0b84df",
+                            "title": "G部门1-1",
+                            "children": [
+                                {
+                                    "userId": "12084531-a676-1943-00d6-f8632e425222",
+                                    "userName": "G用户1-1-1"
+                                },
+                                {
+                                    "userId": "83974c63-e29c-7105-91c1-4c3929a761aa",
+                                    "userName": "G用户1-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "960a0679-aea8-1edc-d0ac-3103fb303cb9",
+                            "title": "G部门1-2",
+                            "children": [
+                                {
+                                    "userId": "de8d1e43-0435-800b-d3f8-4e61f937c828",
+                                    "userName": "G用户1-2-1"
+                                },
+                                {
+                                    "userId": "20df6895-450d-a0df-b8fe-ef8661cfaf7d",
+                                    "userName": "G用户1-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "5184285d-7b23-391a-2565-ec6860a15f82",
+                    "title": "G公司2",
+                    "children": [
+                        {
+                            "key": "4e719177-47a2-004f-0bf9-36e342d2a1c6",
+                            "title": "G部门2-1",
+                            "children": [
+                                {
+                                    "userId": "ed8f1384-6ddb-a841-a44c-38efd1852c58",
+                                    "userName": "G用户2-1-1"
+                                },
+                                {
+                                    "userId": "240b1ace-e57b-0aab-8666-5221002c09c3",
+                                    "userName": "G用户2-1-2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "c364c4b9-3289-5344-5561-a460b4bb076c",
+                            "title": "G部门2-2",
+                            "children": [
+                                {
+                                    "userId": "311a1caf-f85c-f629-767c-4af94bd74cca",
+                                    "userName": "G用户2-2-1"
+                                },
+                                {
+                                    "userId": "b1ac78e3-153f-915c-0758-3acba0272953",
+                                    "userName": "G用户2-2-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        },
+        {
+            "stepName": "模拟步骤H(只有一位用户时,默认选上)",
+            "stepLabel": "经办人拟稿->模拟步骤H",
+            "stepDescription": "",
+            "multipleSelectTag": null,
+            "orderby": 0,
+            "allowSelect": true,
+            "allowSelectAll": false,
+            "autoSelectAll": false,
+            "singleSelect": false,
+            "needUser": true,
+            "exception": null,
+            "stepOrgs": [
+                {
+                    "orgId": "52b0e315-fb0d-9677-7442-47dca936ce53",
+                    "orgName": "H组织1",
+                    "stepUsers": [
+                        {
+                            "userId": "eb97f15b-f044-1fec-fc3d-8666f8e9b457",
+                            "userName": "H用户1-1"
+                        }
+                    ]
+                }
+            ],
+            "stepCompanys": [
+                {
+                    "key": "674c175b-c2b1-3f6e-d3bd-ddf6dd4ca89b",
+                    "title": "H公司1",
+                    "children": [
+                        {
+                            "key": "24f67ebd-9d91-181e-9734-56937526d163",
+                            "title": "H部门1-1",
+                            "children": [
+                                {
+                                    "userId": "51c455e3-ad2f-408f-d495-bb5fc353b17a",
+                                    "userName": "H用户1-1-1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "autoSend": false
+        }
+    ],
+    "success": true,
+    "message": null,
+    "statusCode": 0,
+    "businessDataId": null,
+    "procId": null,
+    "taskId": 0
+}

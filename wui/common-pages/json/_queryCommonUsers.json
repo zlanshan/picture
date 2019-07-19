@@ -1,0 +1,60 @@
+{
+    "describe": "本数据用途:用于用户选择的常用人员选择数据",
+    "rows": [
+	    {
+	        "userId": "010101",
+	        "userName": "超级管理员",
+	        "userText": "超级管理员(轨道交通集团有限公司)"
+	    },
+	    {
+	        "userId": "010102",
+	        "userName": "邢敏",
+	        "userText": "邢敏(运营分公司领导)"
+	    },
+	    {
+	        "userId": "010103",
+	        "userName": "刘安娜",
+	        "userText": "刘安娜(办公室)"
+	    },
+	    {
+	        "userId": "010104",
+	        "userName": "赵志敬",
+	        "userText": "赵志敬(办公室)"
+	    },
+	    {
+	        "userId": "010105",
+	        "userName": "刘敬",
+	        "userText": "刘敬(办公室)"
+	    },
+	    {
+	        "userId": "010106",
+	        "userName": "张三",
+	        "userText": "张三(办公室)"
+	    },
+	    {
+	        "userId": "010107",
+	        "userName": "李四",
+	        "userText": "李四(办公室)"
+	    },
+	    {
+	        "userId": "010108",
+	        "userName": "王五",
+	        "userText": "王五(办公室)"
+	    },
+	    {
+	        "userId": "010109",
+	        "userName": "卢柳",
+	        "userText": "卢柳(办公室)"
+	    },
+	    {
+	        "userId": "010110",
+	        "userName": "齐国",
+	        "userText": "齐国(办公室)"
+	    },
+	    {
+	        "userId": "010111",
+	        "userName": "赳昂",
+	        "userText": "赳昂(办公室)"
+	    }
+    ]
+}

@@ -1,0 +1,235 @@
+
+.wui-opinionBox.validate-error {
+    border: none!important;
+}
+
+.common-opinions {
+	padding: 10px;
+}
+
+.common-opinions .wui-form-radio {
+	display: block;
+	margin: 10px;
+}
+
+/*wui.orgChooseBox组织选择组件/wui.userChooseBox人员选择组件*/
+.wui-orgChooseBox,
+.wui-userChooseBox {
+	width: 100%;
+	position: relative;
+}
+
+.wui-orgChooseBox .wui-tagsbox,
+.wui-userChooseBox .wui-tagsbox {
+	display: block;
+	margin-right: 84px;
+}
+
+.wui-orgChooseBox .wui-tagsinput,
+.wui-userChooseBox .wui-tagsinput {
+	position: absolute;
+	right: 0;
+	top: 0;
+	/*width:90px;*/
+	width: auto;
+}
+
+.wui-orgChooseBox .wui-tagsinput .input-group-btn,
+.wui-userChooseBox .wui-tagsinput .input-group-btn {
+	width: auto;
+}
+
+/*隐藏输入栏*/
+.wui-orgChooseBox.hide-inputbar,
+.wui-userChooseBox.hide-inputbar {}
+
+.wui-orgChooseBox.hide-inputbar .wui-tagsbox,
+.wui-userChooseBox.hide-inputbar .wui-tagsbox {
+	display: none;
+}
+
+.wui-orgChooseBox.hide-inputbar .wui-tagsinput,
+.wui-userChooseBox.hide-inputbar .wui-tagsinput {
+	left: 0;
+	position: relative;
+}
+
+.wui-orgChooseBox .tag-container {
+	min-height: auto;
+}
+
+.wui-orgChooseBox .tag-container input {
+	/*margin-top: 3px;*/
+	margin-bottom: 3px;
+}
+
+.fa-star.fa-star-text{
+	color: #4B83FA;
+}
+
+.cancel-common-use-btn{
+	display: none;
+}
+
+.wui-form-check:hover .cancel-common-use-btn{
+	display: inline-block;
+}
+
+/*workFlow Start*/
+.workflow-page {
+	background: #f3f5f7;
+	min-height: 560px;
+}
+
+.workflow-page .portlet {
+	width: 100%;
+	background: #f3f5f7;
+}
+
+.workflow-page .portlet .portlet-title {
+	font-size: 20px;
+	color: #333;
+	background: #f3f5f7;
+	height: 60px;
+	padding-left: 190px;
+	padding-bottom: 20px;
+	/*display: none;*/
+}
+
+.workflow-page .portlet .portlet-title>i {
+	color: #F03343;
+	margin-right: 5px;
+	font-weight: bolder;
+}
+
+.workflow-page .portlet .portlet-title .btn-group,
+.workflow-page .portlet .portlet-title.portlet-title-fixed .btn-group {
+	position: absolute;
+	bottom: 15px;
+	right: 45px;
+}
+
+.workflow-page .portlet .portlet-body {
+	position: relative;
+	margin-top: 60px;
+	background: #f3f5f7;
+	padding-top: 0px;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu {
+	position: fixed;
+	top: 60px;
+	left: 20px;
+	width: 120px;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu h4 {
+	font-size: 16px;
+	color: #333;
+	margin: 0;
+	padding: 10px;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu>h4>i {
+	color: #f03241;
+	font-weight: bolder;
+	margin-right: 5px;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu ul {
+	margin: 10px;
+	padding: 0;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu ul li {
+	list-style: none;
+	margin: 10px 0;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu li.divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	/*background-color: #e5e5e5;*/
+	border-top: 1px solid #e5e5e5;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu ul li a {
+	margin-left: 25px;
+	font-size: 14px;
+	color: #666;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu ul li a:hover {
+	color: #f03241;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu ul li a i {
+	margin-right: 5px;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-menu ul li button {
+	display: block;
+	/*IE8不支持0 auto居中*/
+	/*margin:0 auto;*/
+	margin: 0 20px;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content {
+	margin-left: 150px;
+	padding: 15px;
+	background: #fff;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .panel-body {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout,
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout td {
+	border: 1px solid #e5e5e5;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout > thead > tr > th,
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout > tbody > tr > th {
+	padding: 20px;
+	font-size: 20px;
+	color: #f03241;
+	text-align: center;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout .control-title {
+	width: 16.67%;
+	text-align: right;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout .control-content .exam-list li {
+	list-style: none;
+	margin: 5px 0;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout .control-content .exam-list li .name {
+	display: inline-block;
+	min-width: 102px;
+	white-space: nowrap;
+	padding-left: 4px;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .table-layout .control-content .exam-list li .time {
+	display: inline-block;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+/*处理文*/
+.workflow-page .portlet .portlet-body .portlet-body-content .wui-form-danger .table-layout,
+.workflow-page .portlet .portlet-body .portlet-body-content .wui-form-danger .table-layout td {
+	border: 1px solid #f03241;
+}
+
+.workflow-page .portlet .portlet-body .portlet-body-content .wui-form-danger .table-layout .control-title {
+	color: #f03241;
+}
