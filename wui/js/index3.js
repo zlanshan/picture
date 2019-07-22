@@ -33,24 +33,50 @@ $(document).ready(function () {
   $('#smallImg-prev').hide();
   // $('#img-prev').hide();
 
-  $('#img-prev').hover(function () {
-    // $('#smallImg-prev').show();
-    $('#img-prev')[0].style.opacity = 1;
-  }, function () {
-    // $('#img-prev').hide();
-    $('#img-prev')[0].style.opacity = 0;
+  function imgHover($) {
+    $.hover(function () {
+      // $('#smallImg-prev').show();
+      $[0].style.opacity = 1;
+    }, function () {
+      // $('#img-prev').hide();
+      $[0].style.opacity = 0;
+  
+    })
+  }
 
-  })
-  $('#img-next').hover(function () {
-    // $('#smallImg-prev').show();
-    $('#img-next')[0].style.opacity = 1;
-  }, function () {
-    // $('#img-prev').hide();
-    $('#img-next')[0].style.opacity = 0;
+  imgHover($('#img-prev'));
+  imgHover($('#img-next'));
 
-  })
+  // $('#img-prev').hover(function () {
+  //   // $('#smallImg-prev').show();
+  //   $('#img-prev')[0].style.opacity = 1;
+  // }, function () {
+  //   // $('#img-prev').hide();
+  //   $('#img-prev')[0].style.opacity = 0;
 
+  // })
+  // $('#img-next').hover(function () {
+  //   // $('#smallImg-prev').show();
+  //   $('#img-next')[0].style.opacity = 1;
+  // }, function () {
+  //   // $('#img-prev').hide();
+  //   $('#img-next')[0].style.opacity = 0;
 
+  // })
+
+  function imgView( el,lists,listId) {
+    var str = el.find('img')[0].src;
+    $('.pic-img-view img').data('id', listId);
+    //  更换图片的路径
+    $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
+    //  更换图片的标题
+    $('.pic-img-view img').attr('title', el.attr('title'));
+    $('.pic-contentBottom').text(el.attr('title'));
+    //  点击li即选中的li标签加上类，其他的移除类
+    // lists.removeClass('active');
+    lists.removeClass('pic-active');
+    el.addClass('pic-active');
+}
 
 
   $('.pic-smallList').on('click', 'li', function () {
@@ -96,16 +122,19 @@ $(document).ready(function () {
       $('.pic-smallList').css('left', -1 * (lists.length - count) * listWidth);
       $('#smallImg-next').hide();
     }
+
+    imgView( $(this), $(lists),listId);
     //  修改大图片的自定义属性id
-    $('.pic-img-view img').data('id', listId);
-    //  更换图片的路径
-    $('.pic-img-view img')[0].src = $(this).find('img')[0].src.replace(/images2/g, 'images1');
-    //  更换图片的标题
-    $('.pic-img-view img').attr('title', $(this).attr('title'));
-    $('.pic-contentBottom').text($(this).attr('title'));
-    //  点击li即选中的li标签加上类，其他的移除类
-    // lists.removeClass('active');
-    $(this).addClass('pic-active').siblings().removeClass('pic-active');
+    // $('.pic-img-view img').data('id', listId);
+    // //  更换图片的路径
+    // $('.pic-img-view img')[0].src = $(this).find('img')[0].src.replace(/images2/g, 'images1');
+    // //  更换图片的标题
+    // $('.pic-img-view img').attr('title', $(this).attr('title'));
+    // $('.pic-contentBottom').text($(this).attr('title'));
+    // //  点击li即选中的li标签加上类，其他的移除类
+    // // lists.removeClass('active');
+    // $(lists).removeClass('pic-active');
+    // $(this).addClass('pic-active');
   })
 
   // // 图片列表li标签的点击，大小图片同时改变
@@ -176,14 +205,15 @@ $(document).ready(function () {
         $('#img-prev').show();
         $('#smallImg-next').hide();
       }
-      var str = $(lists[active]).find('img')[0].src;
-      lists.removeClass('pic-active');
-      $(lists[active]).addClass('pic-active');
-      $('.pic-img-view img').data('id', active);
-      // console.log($('.img-view img').data('index'));
-      $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
-      $('.pic-img-view img').attr('title', $(lists[active]).attr('title'));
-      $('.pic-contentBottom').text($(lists[active]).attr('title'));
+      // var str = $(lists[active]).find('img')[0].src;
+      // $(lists).removeClass('pic-active');
+      // $(lists[active]).addClass('pic-active');
+      // $('.pic-img-view img').data('id', active);
+      // // console.log($('.img-view img').data('index'));
+      // $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
+      // $('.pic-img-view img').attr('title', $(lists[active]).attr('title'));
+      // $('.pic-contentBottom').text($(lists[active]).attr('title'));
+      imgView( $(lists[active]), $(lists),active);
 
     } else {
       var id = $('.pic-img-view img').data('id');
@@ -195,18 +225,19 @@ $(document).ready(function () {
       } else {
         $('.pic-smallList').css('left', -1 * (id - Math.floor(count / 2)) * liWidth);
       }
+      imgView( $(lists[id]), $(lists),id);
 
       // 更改图片路径
-      console.log($(lists[id]).find('img')[0]);
-      var str = $(lists[id]).find('img')[0].src;
-      //
-      lists.removeClass('pic-active');
-      $(lists[id]).addClass('pic-active');
-      $('.pic-img-view img').data('id', id);
-      // console.log($('.img-view img').data('index'));
-      $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
-      $('.pic-img-view img').attr('title', $(lists[id]).attr('title'));
-      $('.pic-contentBottom').text($(lists[id]).attr('title'));
+      // console.log($(lists[id]).find('img')[0]);
+      // var str = $(lists[id]).find('img')[0].src;
+      // //
+      // lists.removeClass('pic-active');
+      // $(lists[id]).addClass('pic-active');
+      // $('.pic-img-view img').data('id', id);
+      // // console.log($('.img-view img').data('index'));
+      // $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
+      // $('.pic-img-view img').attr('title', $(lists[id]).attr('title'));
+      // $('.pic-contentBottom').text($(lists[id]).attr('title'));
 
     }
 
@@ -258,14 +289,16 @@ $(document).ready(function () {
         $('.pic-smallList').css('left', -1 * (lists.length - count) * liWidth);
         $('#smallImg-next').hide();
       }
-      var str = $(lists[active]).find('img')[0].src;
+    imgView( $(lists[active]), $(lists),active);
 
-      $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
-      lists.removeClass('pic-active');
-      $(lists[active]).addClass('pic-active');
-      $('.pic-img-view img').data('id', active);
-      $('.pic-img-view img').attr('title', $(lists[active]).attr('title'));
-      $('.pic-contentBottom').text($(lists[active]).attr('title'));
+      // var str = $(lists[active]).find('img')[0].src;
+
+      // $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
+      // lists.removeClass('pic-active');
+      // $(lists[active]).addClass('pic-active');
+      // $('.pic-img-view img').data('id', active);
+      // $('.pic-img-view img').attr('title', $(lists[active]).attr('title'));
+      // $('.pic-contentBottom').text($(lists[active]).attr('title'));
 
     } else {
       var id = $('.img-view img').data('id');
@@ -278,16 +311,17 @@ $(document).ready(function () {
       } else {
         $('.pic-smallList').css('left', -1 * (id - Math.floor(count / 2)) * liWidth);
       }
+      imgView( $(lists[id]), $(lists),id);
 
-      var str = $(lists[id]).find('img')[0].src;
-      // console.log(str)
-      lists.removeClass('active');
-      $(lists[id]).addClass('active');
-      $('.pic-img-view img').data('id', id);
-      // console.log($('.img-view img').data('index'));
-      $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
-      $('.pic-img-view img').attr('title', $(lists[id]).attr('title'));
-      $('.pic-contentBottom').text($(lists[id]).attr('title'));
+      // var str = $(lists[id]).find('img')[0].src;
+      // // console.log(str)
+      // lists.removeClass('active');
+      // $(lists[id]).addClass('active');
+      // $('.pic-img-view img').data('id', id);
+      // // console.log($('.img-view img').data('index'));
+      // $('.pic-img-view img')[0].src = str.replace(/images2/g, 'images1');
+      // $('.pic-img-view img').attr('title', $(lists[id]).attr('title'));
+      // $('.pic-contentBottom').text($(lists[id]).attr('title'));
 
     }
 
@@ -361,6 +395,7 @@ $(document).ready(function () {
     // }
     var active = $('.pic-smallListItem.pic-active').data('list');
     var ssss = $('.pic-smallList').css('left').split('px')[0];
+
     if (Math.abs(ssss) >= liWidth * (lists.length - count)) {
       wui.errorNotice('已到最后一页');
       $('#smallImg-next').hide();
