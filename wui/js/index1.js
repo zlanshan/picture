@@ -1,4 +1,17 @@
 $(document).ready(function () {
+
+  wui.ajax({
+    method: 'get',
+    url: '../json/pic.json',
+    onSuccess: function(res){
+      var html = template('picList', { rows: res.rows });
+      $('.smallList').html(html);
+    },
+    onError: function (res) {
+      console.error(res);
+    },
+    dataType:'json'
+  })
   // 图片列表的宽度，只有宽度，无内边距外边距等
   var listPicWidth =  $('#smallPic').width();
   // window.onresize = function () {
@@ -18,7 +31,9 @@ $(document).ready(function () {
   $(lists[0]).addClass('active');
   $('#smallImg-prev').hide();
   // $('#img-prev').hide();
-
+  $('#img-prev').hover(function () {
+    $('#img-prev').css('display', 'block');
+  })
 
   // 图片列表li标签的点击，大小图片同时改变
  for (var i = 0; i < lists.length; i++) {
@@ -63,6 +78,7 @@ $(document).ready(function () {
      $('.img-view img')[0].src = $(this).find('img')[0].src.replace(/images2/g, 'images1');
     //  更换图片的标题
      $('.img-view img').attr('title', $(this).attr('title'));
+     $('.contentBottom').text($(this).attr('title'));
     //  点击li即选中的li标签加上类，其他的移除类
      lists.removeClass('active');
      $(this).addClass('active');
@@ -72,7 +88,7 @@ $(document).ready(function () {
   // 根据所有的li，设置ul的宽度,需考虑选中的li的宽度不同
   var activeLi = $('.smallListItem.active').outerWidth(true);
   // 设置ul的width值
-  $('.smallList').css('width', (lists.length - 1) * liWidth + activeLi);
+  // $('.smallList').css('width', (lists.length - 1) * liWidth + activeLi);
   
 
   // 图片右键
@@ -116,6 +132,8 @@ $(document).ready(function () {
       // console.log($('.img-view img').data('index'));
       $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
       $('.img-view img').attr('title', $(lists[active]).attr('title'));
+     $('.contentBottom').text($(lists[active]).attr('title'));
+
     } else {
       var id = $('.img-view img').data('id');
       // 第二个li标签的偏移值
@@ -136,6 +154,8 @@ $(document).ready(function () {
       // console.log($('.img-view img').data('index'));
       $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
       $('.img-view img').attr('title', $(lists[id]).attr('title'));
+     $('.contentBottom').text($(lists[id]).attr('title'));
+
     }
    
 
@@ -180,6 +200,8 @@ $(document).ready(function () {
       $(lists[active]).addClass('active');
       $('.img-view img').data('id', active);
       $('.img-view img').attr('title', $(lists[active]).attr('title'));
+     $('.contentBottom').text($(lists[active]).attr('title'));
+
     } else {
       var id = $('.img-view img').data('id');
       // var offset = $('.smallListItem')[1].offsetLeft;
@@ -200,6 +222,8 @@ $(document).ready(function () {
       // console.log($('.img-view img').data('index'));
       $('.img-view img')[0].src = str.replace(/images2/g, 'images1');
       $('.img-view img').attr('title', $(lists[id]).attr('title'));
+     $('.contentBottom').text($(lists[id]).attr('title'));
+
     }
    
   })

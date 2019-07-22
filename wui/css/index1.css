@@ -1,31 +1,50 @@
-#wrapper{
+#pic-wrapper{
   position: relative;
   width:100%;
   height: 100%;
 }
-#main{
+#pic-main{
   /* width:100%; */
   height: 100%;
+  /* margin-top:20px; */
   margin-right: 300px;
   background: #fff;
   overflow: hidden;
 }
-#container{
+#pic-title{
+margin-top:20px;
+padding:0 20px;
+}
+#pic-title .title{
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  padding:10px 0;
+  border-bottom:1px solid #eee;
+}
+#pic-title .other{
+  padding:10px;
+  text-align: center;
+}
+#pic-title  .pic-time{
+  margin-left:20px;
+}
+#pic-container{
   position: relative;
-  height: 877px;
+  height: 750px;
   margin-right:2px;
   margin-top:10px;
   width:100%;
   overflow: hidden;
 }
-#srcPic{
+#pic-srcPic{
   position: relative;
   padding:3px 70px;
   width:100%;
-  height: 736px;
+  height: 620px;
   
 }
-.img-view{
+.pic-img-view{
   display: block;
   /* position: absolute; */
 
@@ -33,7 +52,7 @@
   height: 100%;
   text-align: center;
 }
-.img-view>img{
+.pic-img-view>img{
   width: auto;  
     height: auto;  
     max-width: 80%;  
@@ -51,11 +70,13 @@
   top:42%;
   transform: translateY(-50%);
   display: inline-block;
-  height: 736px;
+  height: 620px;
   width:70px;
-  color: #ccc;
+  color: #999;
   cursor: pointer;
   font-size:40px;
+  /* display: none; */
+  opacity: 0;
 }
 #img-prev{
 left:0;
@@ -72,8 +93,8 @@ left:0;
     left:25%;
   }
   #img-prev:hover,#img-next:hover{
-    background-color: #e6e6e6;
-    color:#fff;
+    /* background-color: #e6e6e6;
+    color:#fff; */
   }
   #img-list{
     position: absolute;
@@ -90,7 +111,7 @@ left:0;
   height: 90px;
   overflow: hidden;
   }
-  #img-list .smallList{
+  #img-list .pic-smallList{
   width:700%;
   height: 100%;
   background: #fff;
@@ -101,7 +122,7 @@ left:0;
   transition: all 1s;
 
   }
-  .smallList .smallListItem{
+  .pic-smallList .pic-smallListItem{
     width:68px;
     height: 68px;
     line-height: 68px;
@@ -113,14 +134,14 @@ left:0;
     text-align: center;
     position: relative;
   }
-  .smallListItem .item{
+  .pic-smallListItem .pic-item{
     width:100%;
   height: 100%;
   overflow: hidden;
   margin-left: 0;
   margin-top: -1px;
   }
- .smallListItem img{
+ .pic-smallListItem img{
   width: auto;  
   height: auto;  
   max-width: 80%;  
@@ -159,59 +180,59 @@ transform: translate(-50%,-50%);
 color:#fff;
 background: #dfdfdf;
   }
-  #sider{
+  #pic-sider{
     position: absolute;
     top:0;
     right:0;
     width:300px;
     height: 882px;
   }
-  #sider .picInfoTitle{
+  #pic-sider .pic-infoTitle{
     border-left:4px solid #0087e8;
     border-bottom:1px solid #eee;
     padding:10px 15px;
   }
-  .picInfoTitle>h4{
+  .pic-infoTitle>h4{
     margin:0;
     padding:0;
     font-size: 24px;
     color:#000;
    
   }
-  #sider .picInfoContent{
+  #pic-sider .pic-infoContent{
     padding:10px 20px;
 
   }
-  .picInfoContent .contentTop{
+  .pic-infoContent .pic-contentTop{
     font-size: 20px;
     font-weight: 400;
     color:#333;
   }
-  .picInfoContent .contentTop>a{
+  .pic-infoContent .pic-contentTop>a{
     text-decoration: none;
     color:#333;
   }
-  .picInfoContent .contentTop>a:hover{
+  .pic-infoContent .pic-contentTop>a:hover{
     color:#0087e8;
   }
-  .picInfoContent .contentBottom{
+  .pic-infoContent .pic-contentBottom{
     margin-top:6px;
   }
-  .picInfoContent .contentLeft{
+  .pic-infoContent .contentLeft{
     display:inline-block;
     margin-right: 15px;
   }
-  .picInfoContent .contentLeft>a{
+  .pic-infoContent .contentLeft>a{
     text-decoration: none;
     color:#666;
   }
-  .picInfoContent .contentRight{
+  .pic-infoContent .contentRight{
     display: inline;
       padding-left:15px;
       border-left:1px solid #ccc;
       color:#666;
   }
-  .picInfoContent .contentLeft>a:hover, .picInfoContent .contentRight:hover{
+  .pic-infoContent .contentLeft>a:hover, .pic-infoContent .contentRight:hover{
     text-decoration: underline;
   }
   /* .active{
@@ -223,7 +244,7 @@ background: #dfdfdf;
     margin: 0 !important;
     margin-top: 5px !important;
   } */
-  .active{
+  .pic-active{
     border:2px solid #0087e8 !important;
     /* transform: scale(1.2); */
     padding:0;
